@@ -1,0 +1,59 @@
+<nav th:fragment="common-sidebar" id="sidebar">
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+    <a
+      href="/"
+      class="
+        d-flex
+        align-items-center
+        mb-3 mb-md-0
+        me-md-auto
+        text-white text-decoration-none
+      "
+    >
+      <span class="fs-5 fw-semibold">Boards</span>
+    </a>
+    <ul class="nav flex-column">
+      <li class="nav-item mb-1">
+        <button
+          class="
+            btn btn-toggle
+            align-items-center
+            text-white
+            rounded::before
+            collapsed
+          "
+          data-bs-toggle="collapse"
+          data-bs-target="#dashboard-collapse"
+          aria-expanded="false"
+        >
+          Category1
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li>
+              <a href="#" class="link-dark text-white rounded">Overview</a>
+            </li>
+            <li><a href="#" class="link-dark text-white rounded">Weekly</a></li>
+            <li>
+              <a href="#" class="link-dark text-white rounded">Monthly</a>
+            </li>
+            <li>
+              <a href="#" class="link-dark text-white rounded">Annually</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          >Disabled</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
