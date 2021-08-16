@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnBoard</title>
+    <th:block th:include="common/view-link"></th:block>
+    <th:block th:include="common/view-script"></th:block>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header th:insert="common/header.html"></header>
+      <!-- SIDEBAR -->
+      <nav th:insert="common/sidebar.html"></nav>
+      <div class="container" id="content">
+        <!-- FOOTER -->
+        <footer th:insert="common/footer.html"></footer>
+      </div>
+    </div>
+  </body>
+</html>

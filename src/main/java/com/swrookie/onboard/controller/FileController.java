@@ -1,5 +1,5 @@
 package com.swrookie.onboard.controller;
 
-public class FileAttachmentController {
+public class FileController {
 
 }

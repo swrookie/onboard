@@ -7,7 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.swrookie.onboard.common.BaseTime;
+
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +19,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 public class User extends BaseTime{
+	@Column
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
@@ -23,10 +27,20 @@ public class User extends BaseTime{
 	private String firstName;
 	@Column(name = "lastname")
 	private String lastName;
-	@Column(unique=true)
+	@Column(name = "username", unique = true)
 	private String userName;
-	@Column(unique=true)
+	@Column(name = "email", unique = true)
 	private String email;
 	@Column(name = "password")
 	private String password;
+	
+	@Builder
+	public User(Long id, String firstName, String lastName, String userName, String email, String password) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.email = email;
+		this.password = password;
+	}
 }

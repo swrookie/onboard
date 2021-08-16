@@ -1,4 +1,4 @@
-package com.swrookie.onboard.domain;
+package com.swrookie.onboard.common;
 
 import java.sql.Timestamp;
 

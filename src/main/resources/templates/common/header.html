@@ -14,24 +14,41 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            sec:authorize="isAnonymous()"
+            th:href="@{/security/login.html}"
+            class="nav-link"
+            aria-current="page"
+            >로그인</a
+          >
+          <a
+            sec:authorize="isAuthenticated()"
+            th:href="@{/security/logout.html}"
+            class="nav-link"
+            aria-current="page"
+            >로그인</a
+          >
         </li>
         <li class="nav-item">
           <a
-            class="nav-link disabled"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
-            >Disabled</a
+            sec:authorize="isAnonymous()"
+            th:href="@{/security/register.html}"
+            class="nav-link"
+            aria-current="page"
+            >회원가입</a
           >
         </li>
       </ul>

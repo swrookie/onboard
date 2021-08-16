@@ -7,25 +7,29 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.swrookie.onboard.common.BaseTime;
-
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "board")
+@Table(name = "category")
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class Board extends BaseTime {
+public class Category {
 	@Column
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	@Column(name = "label", unique = true)
+	private String label;
+	@Column(name = "ordernum")
+	private int orderNum;
 	
 	@Builder
-	public Board(Long id) {
+	public Category(Long id, String label, int orderNum) {
 		this.id = id;
+		this.label = label;
+		this.orderNum = orderNum;
 	}
 }
