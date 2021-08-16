@@ -11,7 +11,7 @@ Framework
   - CSS
   - JavaScript
 - Back-End
-  - Spring Boot 2.5.3
+  - Spring Boot 2.5.3 (Java 11)
   - Spring Data JPA
   - Spring Security
   - Lombok
