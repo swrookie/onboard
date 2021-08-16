@@ -7,8 +7,7 @@ IDE
 
 Framework
 - Front-End
-  - HTML
-  - CSS
+  - Bootstrap 5.1.0
   - JavaScript
 - Back-End
   - Spring Boot 2.5.3 (Java 11)
