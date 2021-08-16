@@ -3,6 +3,7 @@
  
 # Development Environment
 IDE
+- Visual Studio Code
 - Spring Tool Suite 4
 
 Framework
