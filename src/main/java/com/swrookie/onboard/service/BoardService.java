@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.swrookie.onboard.domain.Board;
+import com.swrookie.onboard.domain.BoardEntity;
 import com.swrookie.onboard.dto.BoardDto;
 import com.swrookie.onboard.repository.BoardRepository;
 
@@ -19,10 +19,10 @@ public class BoardService {
 	
 	@Transactional
 	public List<BoardDto> getBoardList() {
-		List<Board> boards = boardRepository.findAll();
+		List<BoardEntity> boards = boardRepository.findAll();
 		List<BoardDto> boardDtoList = new ArrayList<>();
 		
-		for (Board board: boards) {
+		for (BoardEntity board: boards) {
 			BoardDto boardDto = BoardDto.builder()
 										.id(board.getId())
 										.createDate(board.getCreateDate())

@@ -2,7 +2,7 @@ package com.swrookie.onboard.dto;
 
 import java.sql.Timestamp;
 
-import com.swrookie.onboard.domain.User;
+import com.swrookie.onboard.domain.UserEntity;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -37,8 +37,8 @@ public class UserDto {
 		this.updateDate = updateDate;
 	}
 	
-	public User toEntity() {
-		User user = User.builder()
+	public UserEntity toEntity() {
+		UserEntity user = UserEntity.builder()
 						.id(id)
 						.firstName(firstName)
 						.lastName(lastName)

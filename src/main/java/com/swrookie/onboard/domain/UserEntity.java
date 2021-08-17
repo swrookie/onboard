@@ -14,11 +14,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "member")
+@Table(name = "user")
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class User extends BaseTime{
+public class UserEntity extends BaseTime{
 	@Column
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -35,7 +35,7 @@ public class User extends BaseTime{
 	private String password;
 	
 	@Builder
-	public User(Long id, String firstName, String lastName, String userName, String email, String password) {
+	public UserEntity(Long id, String firstName, String lastName, String userName, String email, String password) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

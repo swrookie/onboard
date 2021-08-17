@@ -1,6 +1,6 @@
 package com.swrookie.onboard.dto;
 
-import com.swrookie.onboard.domain.Category;
+import com.swrookie.onboard.domain.CategoryEntity;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -24,8 +24,8 @@ public class CategoryDto {
 		this.orderNum = orderNum;
 	}
 	
-	public Category toEntity() {
-		Category category = Category.builder()
+	public CategoryEntity toEntity() {
+		CategoryEntity category = CategoryEntity.builder()
 									.id(id)
 									.label(label)
 									.orderNum(orderNum)

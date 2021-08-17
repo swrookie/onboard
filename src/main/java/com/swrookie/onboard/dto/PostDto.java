@@ -2,7 +2,7 @@ package com.swrookie.onboard.dto;
 
 import java.sql.Timestamp;
 
-import com.swrookie.onboard.domain.Post;
+import com.swrookie.onboard.domain.PostEntity;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -30,8 +30,8 @@ public class PostDto {
 		this.updateDate = updateDate;
 	}
 	
-	public Post toEntity() {
-		Post post = Post.builder()
+	public PostEntity toEntity() {
+		PostEntity post = PostEntity.builder()
 						.id(id)
 						.title(title)
 						.content(content)

@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.swrookie.onboard.domain.Post;
+import com.swrookie.onboard.domain.PostEntity;
 import com.swrookie.onboard.dto.PostDto;
 import com.swrookie.onboard.repository.PostRepository;
 
@@ -19,10 +19,10 @@ public class PostService {
 	
 	@Transactional
 	public List<PostDto> getPostList() {
-		List<Post> posts = postRepository.findAll();
+		List<PostEntity> posts = postRepository.findAll();
 		List<PostDto> postDtoList = new ArrayList<>();
 		
-		for (Post post: posts) {
+		for (PostEntity post: posts) {
 			PostDto postDto = PostDto.builder()
 									 .id(post.getId())
 									 .title(post.getTitle())

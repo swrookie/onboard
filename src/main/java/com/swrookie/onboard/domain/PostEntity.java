@@ -5,31 +5,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+
+import com.swrookie.onboard.common.BaseTime;
 
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "category")
+@Table(name = "post")
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class Category {
+public class PostEntity extends BaseTime {
 	@Column
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "label", unique = true)
-	private String label;
-	@Column(name = "ordernum")
-	private int orderNum;
+	@Column
+	private String title;
+	@Column
+	@Lob
+	private String content;
 	
 	@Builder
-	public Category(Long id, String label, int orderNum) {
+	public PostEntity(Long id, String title, String content) {
 		this.id = id;
-		this.label = label;
-		this.orderNum = orderNum;
+		this.title = title;
+		this.content = content;
 	}
 }

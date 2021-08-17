@@ -18,14 +18,14 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
-public class Board extends BaseTime {
+public class BoardEntity extends BaseTime {
 	@Column
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Builder
-	public Board(Long id) {
+	public BoardEntity(Long id) {
 		this.id = id;
 	}
 }

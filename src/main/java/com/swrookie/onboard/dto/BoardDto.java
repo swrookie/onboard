@@ -2,7 +2,7 @@ package com.swrookie.onboard.dto;
 
 import java.sql.Timestamp;
 
-import com.swrookie.onboard.domain.Board;
+import com.swrookie.onboard.domain.BoardEntity;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -25,8 +25,8 @@ public class BoardDto {
 		this.createDate = createDate;
 	}
 	
-	public Board toEntity() {
-		Board board = Board.builder()
+	public BoardEntity toEntity() {
+		BoardEntity board = BoardEntity.builder()
 						   .id(id)
 						   .build();
 		

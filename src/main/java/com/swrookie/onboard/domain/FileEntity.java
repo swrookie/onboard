@@ -1,5 +1,5 @@
 package com.swrookie.onboard.domain;
 
-public class File {
+public class FileEntity {
 
 }

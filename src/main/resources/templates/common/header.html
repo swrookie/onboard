@@ -29,23 +29,23 @@
         <li class="nav-item">
           <a
             sec:authorize="isAnonymous()"
-            th:href="@{/security/login.html}"
+            th:href="@{/user/login}"
             class="nav-link"
             aria-current="page"
             >로그인</a
           >
           <a
             sec:authorize="isAuthenticated()"
-            th:href="@{/security/logout.html}"
+            th:href="@{/user/logout}"
             class="nav-link"
             aria-current="page"
-            >로그인</a
+            >로그아웃</a
           >
         </li>
         <li class="nav-item">
           <a
             sec:authorize="isAnonymous()"
-            th:href="@{/security/register.html}"
+            th:href="@{/user/register}"
             class="nav-link"
             aria-current="page"
             >회원가입</a
